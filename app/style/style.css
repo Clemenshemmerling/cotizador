@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.ctn {
+  background-color: rgba(0,202,254,.7);
+  padding: 15px 15px;
+}
+
+.ctn input {
+  display: block;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  height: 38px !important;
+  padding: 0 8px;
+  margin: 0;
+  color:  rgba(0,0,0,.9);
+  border: 2px solid #fff!important;
+  outline: none;
+  background-color: #fff !important;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-appearance: none!important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.inCtn {
+  margin-bottom: 0 !important;
+}
+
+.inicio, .finaliza {
+  padding: 0 !important;
+}
+
+.inicio {
+  border-right: solid 5px #d4d4d4;
+}
+
+.inicio {
+  border-radius: 4px 0px 0px 4px!important;
+}
+
+.finaliza {
+  border-radius: 0px 4px 4px 0px!important;
+}
+
+.col.s12.m3.ctn-inp {
+    padding-left: 0;
+}
+
+.ctnIco {
+  margin-bottom: 0 !important;
+  background: white;
+  border-radius: 4px;
+}
+
+.ctnIcon {
+  margin-bottom: 0 !important;
+  background: white;
+}
+
+.ctnIco .col.s2 {
+    margin-top: 8px;
+}
+
+.ctn-date {
+  padding-right: 0 !important;
+}
+
+.date-range {
+    margin-top: 8px;
+}
+
+.col.s9.ctn-date {
+    padding-left: 0;
+}
+
+::-webkit-input-placeholder {
+  color:  rgba(0,0,0,.9);
+}
+::-moz-placeholder {
+  color:  rgba(0,0,0,.9);
+}
+:-ms-input-placeholder {
+  color:  rgba(0,0,0,.9);
+}
+:-moz-placeholder {
+  color:  rgba(0,0,0,.9);
+}
+
+.ini, input#finaliza {
+  border-radius: 5px;
+}
