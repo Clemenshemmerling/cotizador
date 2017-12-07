@@ -10,6 +10,17 @@
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+body {
+  background: url(http://viajesprimavera.com/wp-content/uploads/2015/01/Pagina-viajes-primavera-modi-2.jpg);
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.app {
+  margin-top: 100px;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -36,8 +47,9 @@
 }
 
 .ctn {
-  background-color: rgba(0,202,254,.7);
+  background-color: rgba(255,152,0,.8);
   padding: 15px 15px;
+  border-radius: 4px;
 }
 
 .ctn input {
@@ -130,4 +142,41 @@
 
 .ini, input#finaliza {
   border-radius: 5px;
+}
+
+.ticket {
+  margin: 10px;
+}
+
+#boletos {
+  top: 162px !important;
+  width: 286px !important;
+}
+
+.ctn-bole {
+  padding: 20px;
+}
+
+.number {
+  font-size: 30px;
+  text-align: center !important;
+  padding-left: 25px !important;
+}
+
+.margin {
+  margin-bottom: 30px;
+}
+
+.search {
+  margin-top: 28px;
+}
+
+.btn-floating.btn-large {
+    width: 112px;
+    height: 112px;
+}
+
+a.btn-floating.btn-large {
+  margin-top: -17px;
+  background: rgba(255,152,0,.9) !important;
 }

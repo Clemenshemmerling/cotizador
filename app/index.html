@@ -4,63 +4,112 @@
     <meta charset="utf-8">
     <title>Cotizador</title>
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-    <div class="row">
-      <div class="col s12">
-        <div class="ctn">
-          <div class="row inCtn">
-            <div class="col s12 m3 ctn-inp">
-              <div class="row ctnIco">
-                <div class="col s2">
-                   <i class="material-icons">flight_takeoff</i>
+    <div class="row app">
+      <div class="col s10">
+        <div class="col s12">
+          <div class="ctn">
+            <div class="row inCtn">
+              <div class="col s12 m3 ctn-inp">
+                <div class="row ctnIco">
+                  <div class="col s2">
+                    <i class="material-icons">flight_takeoff</i>
+                  </div>
+                  <div class="col s10">
+                    <input type="text" placeholder="Ciudad de Guatemala">
+                  </div>
                 </div>
-                <div class="col s10">
-                  <input type="text" placeholder="Ciudad de Guatemala">
+              </div>
+              <div class="col s12 m3 ctn-inp">
+                <div class="row ctnIco">
+                  <div class="col s2">
+                    <i class="material-icons">flight_land</i>
+                  </div>
+                  <div class="col s10">
+                    <input type="text" placeholder="Lugar de destino">
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m1 inicio">
+                <div class="row ctnIcon ini">
+                  <div class="col s4">
+                    <i class="material-icons date-range" aria-hidden="true">date_range</i>
+                  </div>
+                  <div class="col s8 ctn-date">
+                    <input type="text" name="" value="" id="inicio">
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m1 ctn-date finaliza">
+                <div class="row ctnIcon fin">
+                  <div class="col s4">
+                    <i class="material-icons date-range" aria-hidden="true">date_range</i>
+                  </div>
+                  <div class="col s8 ctn-date">
+                    <input type="text" name="" value="" id="finaliza">
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m4 ctn-inp">
+                <div class="row ctnIco">
+                  <div class="col s2">
+                    <i class="material-icons">face</i>
+                  </div>
+                  <div class="col s10">
+                    <p class="dropdown-button ticket" data-activates='boletos'>{{cantidad}}</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col s12 m3 ctn-inp">
-              <div class="row ctnIco">
-                <div class="col s2">
-                   <i class="material-icons">flight_land</i>
-                </div>
-                <div class="col s10">
-                  <input type="text" placeholder="Lugar de destino">
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m1 inicio">
-              <div class="row ctnIcon ini">
+            <div id="boletos" class='dropdown-content'>
+              <div class="row ctn-bole">
                 <div class="col s4">
-                  <i class="material-icons date-range" aria-hidden="true">date_range</i>
+                  Adultos
                 </div>
-                <div class="col s8 ctn-date">
-                  <input type="text" name="" value="" id="inicio">
+                <div class="col s8 margin">
+                  <div class="col s4">
+                    <div class="col s4">
+                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="counter -= 1"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                  <div class="col s4 number">{{counter}}</div>
+                  <div class="col s4">
+                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="counter += 1"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col s12 m1 ctn-date finaliza">
-              <div class="row ctnIcon fin">
                 <div class="col s4">
-                  <i class="material-icons date-range" aria-hidden="true">date_range</i>
+                  Niños
                 </div>
-                <div class="col s8 ctn-date">
-                  <input type="text" name="" value="" id="finaliza">
+                <div class="col s8">
+                  <div class="col s4">
+                    <div class="col s4">
+                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="childConter -= 1"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
+                  <div class="col s4 number">{{childConter}}</div>
+                  <div class="col s4">
+                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="childConter += 1"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="col s1">
+        <a class="btn-floating btn-large"><p class="search">Buscar</p></a>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
