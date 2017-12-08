@@ -41,7 +41,7 @@
                     <i class="material-icons date-range" aria-hidden="true">date_range</i>
                   </div>
                   <div class="col s8 ctn-date">
-                    <input type="text" name="" value="" id="inicio">
+                    <input type="text" name="" value="" id="inicio" v-model="inicio">
                   </div>
                 </div>
               </div>
@@ -51,7 +51,7 @@
                     <i class="material-icons date-range" aria-hidden="true">date_range</i>
                   </div>
                   <div class="col s8 ctn-date">
-                    <input type="text" name="" value="" id="finaliza">
+                    <input type="text" name="" value="" id="finaliza" v-model="final">
                   </div>
                 </div>
               </div>
@@ -74,12 +74,12 @@
                 <div class="col s8 margin">
                   <div class="col s4">
                     <div class="col s4">
-                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="counter -= 1"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="minusFirst"><i class="fa fa-minus" aria-hidden="true"></i></a>
                     </div>
                   </div>
                   <div class="col s4 number">{{counter}}</div>
                   <div class="col s4">
-                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="counter += 1"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="moreFirst"><i class="fa fa-plus" aria-hidden="true"></i></a>
                   </div>
                 </div>
                 <div class="col s4">
@@ -88,12 +88,12 @@
                 <div class="col s8">
                   <div class="col s4">
                     <div class="col s4">
-                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="childConter -= 1"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                      <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="cminusFirst"><i class="fa fa-minus" aria-hidden="true"></i></a>
                     </div>
                   </div>
                   <div class="col s4 number">{{childConter}}</div>
                   <div class="col s4">
-                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="childConter += 1"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-small waves-effect waves-light red" v-on:click="cmoreFirst"><i class="fa fa-plus" aria-hidden="true"></i></a>
                   </div>
                 </div>
               </div>
